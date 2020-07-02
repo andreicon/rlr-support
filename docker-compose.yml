@@ -1,7 +1,7 @@
 version: "2"
 services:
   rlrs3:
-    build:
+    build: .
     ports:
       - 9600:9600/tcp 
       - 9600:9600/udp 
@@ -10,7 +10,7 @@ services:
       - ./acServer:/acServer
       - ./conf_rlrs3:/acServer/cfg
   rlrs4:
-    build:
+    build: .
     ports:
       - 9601:9601/tcp 
       - 9601:9601/udp 
@@ -19,7 +19,7 @@ services:
       - ./acServer:/acServer
       - ./conf_rlrs4:/acServer/cfg
   rlrs5:
-    build:
+    build: .
     ports:
       - 9602:9602/tcp 
       - 9602:9602/udp 
