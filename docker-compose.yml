@@ -9,6 +9,7 @@ services:
     volumes: 
       - ./acServer:/acServer
       - ./conf_rlrs3:/acServer/cfg
+      - ./setups:/acServer/setups
   rlrs4:
     build: .
     ports:
@@ -18,13 +19,14 @@ services:
     volumes: 
       - ./acServer:/acServer
       - ./conf_rlrs4:/acServer/cfg
-  rlrs5:
-    build: .
-    ports:
-      - 9602:9602/tcp 
-      - 9602:9602/udp 
-      - 8083:8083
-    volumes: 
-      - ./acServer:/acServer
-      - ./conf_rlrs5:/acServer/cfg
+      - ./setups:/acServer/setups
+  # rlrs5:
+  #   build: .
+  #   ports:
+  #     - 9602:9602/tcp 
+  #     - 9602:9602/udp 
+  #     - 8083:8083
+  #   volumes: 
+  #     - ./acServer:/acServer
+  #     - ./conf_rlrs5:/acServer/cfg
     
