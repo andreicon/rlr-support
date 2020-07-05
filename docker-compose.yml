@@ -10,6 +10,8 @@ services:
       - ./acServer:/acServer
       - ./conf_rlrs3:/acServer/cfg
       - ./setups:/acServer/setups
+      - ./results_s3:/acServer/results
+
   rlrs4:
     build: .
     ports:
@@ -20,6 +22,8 @@ services:
       - ./acServer:/acServer
       - ./conf_rlrs4:/acServer/cfg
       - ./setups:/acServer/setups
+      - ./results_s4:/acServer/results
+
   # rlrs5:
   #   build: .
   #   ports:
@@ -29,4 +33,7 @@ services:
   #   volumes: 
   #     - ./acServer:/acServer
   #     - ./conf_rlrs5:/acServer/cfg
+  #     - ./setups:/acServer/setups
+  #     - ./results_s5:/acServer/results
+
     
